@@ -78,6 +78,7 @@ end
 --RETURNS table of items, indexed by display name.
 local function index() --indexes the items in the inventories by display name.
     local itemTable = {}
+    table.setn(table.getn(INVENTORIES) * 27)
     for _, chest in pairs(INVENTORIES) do
         for slot, item in pairs(chest.list()) do
                 local details = chest.getItemDetail(slot)
